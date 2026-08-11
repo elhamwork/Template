@@ -1,0 +1,32 @@
+.process__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2.2rem;
+  position: relative;
+}
+
+.process__step {
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.process__number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  opacity: 0.85;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+
+.process__step h3 {
+  font-size: 1.12rem;
+  margin-bottom: 0.6rem;
+}
+
+.process__step p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}

@@ -1,0 +1,84 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about__media {
+  position: relative;
+}
+
+.about__media img {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.about__badge {
+  position: absolute;
+  left: 1.5rem;
+  bottom: -1.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  box-shadow: var(--shadow-md);
+}
+
+.about__badge-number {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.about__badge-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  max-width: 120px;
+}
+
+.about__content h2 {
+  font-size: clamp(1.75rem, 3vw, 2.3rem);
+  margin: 0.7rem 0 1.2rem;
+}
+
+.about__body {
+  color: var(--color-text-muted);
+  font-size: 1.02rem;
+  margin-bottom: 1.6rem;
+}
+
+.about__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.about__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.about__points-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+  }
+}

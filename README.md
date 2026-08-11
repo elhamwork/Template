@@ -1,0 +1,81 @@
+# Roofing Company Website Template
+
+A premium, reusable React website template built for roofing contractors. Designed to be resold and rebranded for multiple companies with minimal effort.
+
+## Tech Stack
+
+- React 19 + Vite
+- Plain CSS (custom design system, CSS variables, no UI framework dependency)
+- No backend required — the estimate form UI is ready to wire up to any API/form service (Formspree, Netlify Forms, a serverless function, etc.)
+
+## Getting Started
+
+```bash
+npm install
+npm run dev       # start local dev server
+npm run build     # production build to /dist
+npm run preview   # preview the production build
+```
+
+## Rebranding This Template
+
+**Everything is controlled from one file: `src/config/siteConfig.js`.**
+
+To turn this into a new customer's website, edit that file only — you should not need to touch any component. It contains:
+
+- Company name, logo text, license number, years in business
+- Contact info (phone, email, address, business hours)
+- Brand colors (`theme.primaryColor`, `theme.secondaryColor`, `theme.accentColor`) — applied globally via CSS custom properties at runtime in `App.jsx`
+- Social links
+- Hero heading/subheading/buttons/image
+- Trust bar items
+- Services (6 cards with image, name, description)
+- About section copy, image, and credibility points
+- Projects/gallery entries
+- "Why Choose Us" reasons
+- Process steps
+- Testimonials
+- Service areas
+- FAQ
+- Estimate form service options
+- Footer description
+- SEO title/description
+
+### Swapping Images
+
+Every image in the site is a URL referenced from `siteConfig.js`. Replace the Unsplash placeholder URLs with the customer's own photography (hosted anywhere, or dropped into `/public` and referenced as `/your-image.jpg`).
+
+### Changing the Favicon
+
+Replace `public/favicon.svg`, or point `company.favicon` in `siteConfig.js` at a different file.
+
+## Project Structure
+
+```
+src/
+  config/
+    siteConfig.js      # single source of truth for all content/branding
+  components/
+    Navbar.jsx / .css
+    Hero.jsx / .css
+    TrustBar.jsx / .css
+    Services.jsx / .css
+    About.jsx / .css
+    Projects.jsx / .css
+    WhyChooseUs.jsx / .css
+    Process.jsx / .css
+    Testimonials.jsx / .css
+    ServiceAreas.jsx / .css
+    FAQ.jsx / .css
+    CTA.jsx / .css
+    EstimateForm.jsx / .css
+    Footer.jsx / .css
+    Reveal.jsx          # scroll fade-in wrapper
+    icons.jsx            # small inline SVG icon set
+  hooks/
+    useReveal.js
+  index.css               # design system: tokens, typography, buttons, layout utilities
+  App.jsx                  # composes all sections, injects theme + SEO meta at runtime
+```
+
+Each section is an independent, self-contained component with its own colocated stylesheet — remove, reorder, or duplicate sections in `App.jsx` as needed per project.
