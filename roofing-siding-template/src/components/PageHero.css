@@ -1,0 +1,17 @@
+.page-hero {
+  background-color: var(--color-primary);
+  padding: var(--space-6) 0 var(--space-5);
+}
+
+.page-hero h1 {
+  color: var(--color-white);
+  font-size: var(--text-3xl);
+  margin-top: var(--space-1);
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--text-lg);
+  max-width: 640px;
+  margin-top: var(--space-2);
+}

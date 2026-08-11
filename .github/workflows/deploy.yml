@@ -1,5 +1,10 @@
 name: Deploy to GitHub Pages
 
+# A GitHub Pages site serves a single deployment per repo, so both
+# templates are built here and combined into one artifact:
+#   /                          -> Cornerstone Roofing Co. (single-page template)
+#   /roofing-siding-template/  -> Ironclad Roofing & Siding (multi-page template)
+
 on:
   push:
     branches:
@@ -29,16 +34,28 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install & build — Cornerstone Roofing Co. (root template)
+        run: |
+          npm ci
+          npm run build
 
-      - name: Build
-        run: npm run build
+      - name: Install & build — Ironclad Roofing & Siding (multi-page template)
+        working-directory: roofing-siding-template
+        run: |
+          npm ci
+          npm run build
+
+      - name: Combine builds into one deployable site
+        run: |
+          mkdir -p combined
+          cp -r dist/. combined/
+          mkdir -p combined/roofing-siding-template
+          cp -r roofing-siding-template/dist/. combined/roofing-siding-template/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: combined
 
   deploy:
     needs: build

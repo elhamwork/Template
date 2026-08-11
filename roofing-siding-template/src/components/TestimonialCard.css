@@ -1,0 +1,39 @@
+.testimonial-card {
+  margin: 0;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-4) var(--space-4);
+  border-left: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-card__stars {
+  display: flex;
+  gap: 2px;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.testimonial-card blockquote {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-charcoal);
+  line-height: 1.65;
+}
+
+.testimonial-card figcaption {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-base);
+  color: var(--color-primary);
+}
+
+.testimonial-card__city {
+  font-size: var(--text-sm);
+  color: var(--color-charcoal-muted);
+}

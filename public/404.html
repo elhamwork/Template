@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // This combined Pages site hosts two templates:
+      //   /Template/                          -> single-page template
+      //   /Template/roofing-siding-template/  -> multi-page (client-routed) template
+      // GitHub Pages has no server-side routing, so a direct visit to a
+      // deep link inside the multi-page app (e.g. .../roofing-siding-template/about)
+      // 404s. Stash the intended path and redirect to that app's shell;
+      // its index.html restores the path via history.replaceState before
+      // React Router mounts, so the correct page still renders.
+      var path = location.pathname;
+      var multiPageBase = "/Template/roofing-siding-template/";
+
+      if (path.indexOf(multiPageBase) === 0) {
+        sessionStorage.redirect = path + location.search + location.hash;
+        location.replace(multiPageBase);
+      } else {
+        location.replace("/Template/");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

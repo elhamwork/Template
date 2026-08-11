@@ -1,4 +1,15 @@
-# Roofing Company Website Template
+# Roofing Company Website Templates
+
+This repo contains two independent, reusable React website templates built for roofing contractors, each designed to be resold and rebranded with minimal effort:
+
+1. **`/` (this directory)** — "Cornerstone Roofing Co.", a premium single-page scrolling template. See details below.
+2. **[`roofing-siding-template/`](./roofing-siding-template)** — "Ironclad Roofing & Siding", a multi-page template (Home/About/Services/Portfolio/Contact) built on an explicit 8pt-grid design system. See its own [README](./roofing-siding-template/README.md).
+
+Both are deployed together via `.github/workflows/deploy.yml`: template 1 at the site root, template 2 at `/roofing-siding-template/`.
+
+---
+
+## Template 1: Cornerstone Roofing Co. (single-page)
 
 A premium, reusable React website template built for roofing contractors. Designed to be resold and rebranded for multiple companies with minimal effort.
 
