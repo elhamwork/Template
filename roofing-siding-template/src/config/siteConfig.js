@@ -91,26 +91,32 @@ const siteConfig = {
   // full page instead of duplicating that content on Home.
   explore: [
     {
-      icon: "roof",
       title: "Our Services",
       description: "Roof repair, replacement, maintenance, and siding.",
       linkText: "View All Services",
       to: "/services",
+      image:
+        "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=900&q=80",
+      imageAlt: "Roofer installing new architectural shingles",
     },
     {
-      icon: "layers",
       title: "Our Work",
       description: "Recent roofing and siding projects across the Miami Valley.",
       linkText: "View Gallery",
       to: "/gallery",
+      image:
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80",
+      imageAlt: "Completed roofing and siding project",
     },
     {
-      icon: "badge",
       title: "Reviews",
       description: "5-star rated by homeowners across Dayton, OH.",
       linkText: "Read Our Reviews",
       // resolved from social.google at render time — see Home.jsx
       href: null,
+      image:
+        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80",
+      imageAlt: "Happy homeowner in front of their finished roof",
     },
   ],
 

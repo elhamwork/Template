@@ -3,26 +3,35 @@
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: var(--space-4);
+  overflow: hidden;
   transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
 }
 
-.explore-card:hover {
+.explore-card:hover,
+.explore-card:focus-visible {
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
   border-color: var(--color-accent);
 }
 
-.explore-card__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: var(--color-light);
-  color: var(--color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space-3);
+.explore-card__image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.explore-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.explore-card:hover .explore-card__image img {
+  transform: scale(1.06);
+}
+
+.explore-card__body {
+  padding: var(--space-4);
 }
 
 .explore-card h3 {
@@ -36,22 +45,67 @@
   margin-bottom: var(--space-3);
 }
 
-.explore-card__link {
+/* Interactive pill CTA — background/arrow animate on hover via transform
+   and background-color only, so it stays smooth on lower-end devices. */
+.explore-card__cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
   font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: 600;
   letter-spacing: 0.3px;
   text-transform: uppercase;
-  color: var(--color-accent);
+  overflow: hidden;
+  transition: color var(--transition);
 }
 
-.explore-card__link svg {
-  transition: transform var(--transition);
+.explore-card__cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+  z-index: 0;
 }
 
-.explore-card:hover .explore-card__link svg {
+.explore-card__cta span,
+.explore-card__cta svg {
+  position: relative;
+  z-index: 1;
+}
+
+.explore-card__cta svg {
+  transition: transform 220ms ease;
+}
+
+.explore-card:hover .explore-card__cta,
+.explore-card:focus-visible .explore-card__cta {
+  color: var(--color-white);
+}
+
+.explore-card:hover .explore-card__cta::before,
+.explore-card:focus-visible .explore-card__cta::before {
+  transform: scaleX(1);
+}
+
+.explore-card:hover .explore-card__cta svg,
+.explore-card:focus-visible .explore-card__cta svg {
   transform: translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-card,
+  .explore-card__image img,
+  .explore-card__cta::before,
+  .explore-card__cta svg {
+    transition: none;
+  }
 }

@@ -16,6 +16,7 @@ export default function BeforeAfterSlider({ before, after }) {
 
   const onPointerDown = (e) => {
     dragging.current = true;
+    e.currentTarget.setPointerCapture(e.pointerId);
     updateFromClientX(e.clientX);
   };
 

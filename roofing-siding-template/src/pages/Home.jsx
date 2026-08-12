@@ -3,7 +3,6 @@ import Hero from "../components/Hero";
 import TrustCard from "../components/TrustCard";
 import ExploreCard from "../components/ExploreCard";
 import Button from "../components/Button";
-import { iconMap } from "../components/icons";
 import usePageMeta from "../hooks/usePageMeta";
 import "./Home.css";
 
@@ -31,7 +30,8 @@ export default function Home() {
             {explore.map((item) => (
               <ExploreCard
                 key={item.title}
-                icon={iconMap[item.icon]}
+                image={item.image}
+                imageAlt={item.imageAlt}
                 title={item.title}
                 description={item.description}
                 linkText={item.linkText}
