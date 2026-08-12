@@ -7,6 +7,19 @@ This repo contains two independent, reusable React website templates built for r
 
 Both are deployed together via `.github/workflows/deploy.yml`: template 1 at the site root, template 2 at `/roofing-siding-template/`.
 
+## Deploying to Vercel
+
+A `vercel.json` at the repo root is already configured to build and serve both templates from one Vercel project (same `/` + `/roofing-siding-template/` layout as GitHub Pages). To deploy:
+
+1. **Via the Vercel dashboard**: Import this GitHub repo as a new project named `templateroofing`. Vercel will read `vercel.json` automatically (Framework Preset: **Other**; build command and output directory are already set in the file — no need to override them).
+2. **Via the CLI**, from the repo root:
+   ```bash
+   npx vercel --prod --name templateroofing
+   ```
+   (Requires `vercel login` first if you haven't authenticated the CLI before.)
+
+Locally, `npm run build:vercel` runs the same combined build (`scripts/build-vercel.sh`) into `dist_vercel/` so you can sanity-check the output before deploying — e.g. `npx serve dist_vercel`.
+
 ---
 
 ## Template 1: Cornerstone Roofing Co. (single-page)
