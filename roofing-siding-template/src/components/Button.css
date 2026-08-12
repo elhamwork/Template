@@ -10,7 +10,8 @@
   border-radius: var(--radius-sm);
   border: 1.5px solid transparent;
   transition: background-color var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
-  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
 }
 
 .btn:active {

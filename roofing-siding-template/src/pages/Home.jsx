@@ -1,16 +1,14 @@
 import siteConfig from "../config/siteConfig";
 import Hero from "../components/Hero";
-import SectionHeading from "../components/SectionHeading";
 import TrustCard from "../components/TrustCard";
-import ServiceCard from "../components/ServiceCard";
-import TestimonialCard from "../components/TestimonialCard";
+import ExploreCard from "../components/ExploreCard";
 import Button from "../components/Button";
-import { CheckIcon } from "../components/icons";
+import { iconMap } from "../components/icons";
 import usePageMeta from "../hooks/usePageMeta";
 import "./Home.css";
 
 export default function Home() {
-  const { trustCards, services, about, testimonials, seo } = siteConfig;
+  const { trustCards, explore, hero, social, seo } = siteConfig;
   usePageMeta(seo.home);
 
   return (
@@ -27,60 +25,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--light">
+      <section className="section section--light" aria-label="Explore more">
         <div className="container">
-          <SectionHeading
-            eyebrow="What We Do"
-            heading="Our Services"
-            description="Full-service roofing and siding, from a single repair to a complete exterior replacement."
-          />
-          <div className="home-services-grid">
-            {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
-            ))}
-          </div>
-          <div className="home-services-cta">
-            <Button to="/services" variant="secondary" size="md">
-              View All Services
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container home-about-grid">
-          <div className="home-about-media">
-            <img src={about.image} alt={about.imageAlt} loading="lazy" />
-          </div>
-          <div className="home-about-content">
-            <span className="section-heading__eyebrow">{about.eyebrow}</span>
-            <h2>{about.heading}</h2>
-            {about.body.map((paragraph, i) => (
-              <p key={i} className="home-about-paragraph">
-                {paragraph}
-              </p>
-            ))}
-            <ul className="home-about-credentials">
-              {about.credentials.map((item) => (
-                <li key={item}>
-                  <CheckIcon />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <Button to="/about" variant="secondary" size="md">
-              Learn More About Us
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--light">
-        <div className="container">
-          <SectionHeading eyebrow="What Our Customers Say" heading="Trusted Across the Miami Valley" />
-          <div className="home-testimonials-grid">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} testimonial={testimonial} />
+          <div className="home-explore-grid">
+            {explore.map((item) => (
+              <ExploreCard
+                key={item.title}
+                icon={iconMap[item.icon]}
+                title={item.title}
+                description={item.description}
+                linkText={item.linkText}
+                to={item.to}
+                href={item.href ?? social.google}
+              />
             ))}
           </div>
         </div>
@@ -93,7 +50,7 @@ export default function Home() {
             <p>Schedule your free roofing or siding estimate today.</p>
           </div>
           <Button to="/contact" variant="primary" size="lg">
-            {siteConfig.hero.ctaText}
+            {hero.ctaText}
           </Button>
         </div>
       </section>

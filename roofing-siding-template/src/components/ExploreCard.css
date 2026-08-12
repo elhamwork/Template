@@ -1,0 +1,57 @@
+.explore-card {
+  display: block;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.explore-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+}
+
+.explore-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-light);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.explore-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.explore-card p {
+  color: var(--color-charcoal-muted);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-3);
+}
+
+.explore-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.explore-card__link svg {
+  transition: transform var(--transition);
+}
+
+.explore-card:hover .explore-card__link svg {
+  transform: translateX(3px);
+}

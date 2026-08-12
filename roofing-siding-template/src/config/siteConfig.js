@@ -73,20 +73,44 @@ const siteConfig = {
     {
       title: "Family-Owned & Operated",
       icon: "home",
-      description:
-        "Ironclad has been a Miami Valley family business since 2005. When you call, you're talking to a neighbor, not a call center — and every job carries our name on it.",
+      description: "A Miami Valley family business since 2005 — every job carries our name on it.",
     },
     {
       title: "Certified Experts",
       icon: "badge",
-      description:
-        "Our crews hold manufacturer certifications and complete ongoing training every year. That means correct installation, fewer callbacks, and warranties that actually hold up.",
+      description: "Manufacturer-certified crews with ongoing training, year after year.",
     },
     {
       title: "Premium Materials & Warranties",
       icon: "shield",
-      description:
-        "We install trusted, manufacturer-backed roofing and siding systems and stand behind our labor with a written workmanship warranty on every project we complete.",
+      description: "Trusted materials, backed by a written workmanship warranty.",
+    },
+  ],
+
+  // Compact teaser cards used on the Home page — each links out to its
+  // full page instead of duplicating that content on Home.
+  explore: [
+    {
+      icon: "roof",
+      title: "Our Services",
+      description: "Roof repair, replacement, maintenance, and siding.",
+      linkText: "View All Services",
+      to: "/services",
+    },
+    {
+      icon: "layers",
+      title: "Our Work",
+      description: "Recent roofing and siding projects across the Miami Valley.",
+      linkText: "View Gallery",
+      to: "/gallery",
+    },
+    {
+      icon: "badge",
+      title: "Reviews",
+      description: "5-star rated by homeowners across Dayton, OH.",
+      linkText: "Read Our Reviews",
+      // resolved from social.google at render time — see Home.jsx
+      href: null,
     },
   ],
 
