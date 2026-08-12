@@ -4,8 +4,8 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/roofing-siding-template/:path*",
-      "destination": "/roofing-siding-template/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
