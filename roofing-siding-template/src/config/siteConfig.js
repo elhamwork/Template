@@ -4,9 +4,9 @@
 // components read from here rather than hardcoding content.
 // ============================================================================
 
-// Local images live in /public/images and must be resolved against Vite's
-// base URL, since this app can be deployed at a sub-path (e.g. GitHub Pages'
-// /Template/roofing-siding-template/) as well as a domain root (Vercel).
+// Fallback for the one Unsplash photo ID that turned out not to show what
+// its filename/description implied (a chicken nugget, not roofing work) —
+// resolved locally instead of gambling on another unverified stock photo ID.
 const img = (path) => `${import.meta.env.BASE_URL}images/${path}`;
 
 const siteConfig = {
@@ -70,7 +70,7 @@ const siteConfig = {
     ctaText: "Schedule a Free Estimate",
     secondaryCtaText: "View Our Work",
     image:
-      img("hero.svg"),
+      "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=2000&q=80",
     imageAlt: "Roofing contractor installing new architectural shingles on a residential home",
   },
 
@@ -110,7 +110,7 @@ const siteConfig = {
       linkText: "View Gallery",
       to: "/gallery",
       image:
-        img("explore-work.svg"),
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80",
       imageAlt: "Completed roofing and siding project",
     },
     {
@@ -120,7 +120,7 @@ const siteConfig = {
       // resolved from social.google at render time — see Home.jsx
       href: null,
       image:
-        img("explore-reviews.svg"),
+        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80",
       imageAlt: "Happy homeowner in front of their finished roof",
     },
   ],
@@ -133,7 +133,7 @@ const siteConfig = {
       description:
         "Leaks, missing shingles, or storm damage — our team diagnoses the source of the problem and repairs it correctly the first time, backed by our workmanship warranty.",
       image:
-        img("service-repair.svg"),
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
     },
     {
       id: "roof-replacement",
@@ -151,7 +151,7 @@ const siteConfig = {
       description:
         "Scheduled inspections and tune-ups that catch small issues before they become expensive ones, extending the life of your existing roof system.",
       image:
-        img("service-maintenance.svg"),
+        "https://images.unsplash.com/photo-1590942137882-b41c1a5f7267?auto=format&fit=crop&w=1200&q=80",
     },
     {
       id: "siding",
@@ -160,7 +160,7 @@ const siteConfig = {
       description:
         "Vinyl, fiber cement, and engineered wood siding installed to protect your home's exterior and boost curb appeal, with color options to match any style.",
       image:
-        img("service-siding.svg"),
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
     },
   ],
 
@@ -178,7 +178,7 @@ const siteConfig = {
       "A+ rated with the local Better Business Bureau",
     ],
     image:
-      img("about.svg"),
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=80",
     imageAlt: "Ironclad Roofing & Siding crew on a completed residential roofing project",
   },
 
@@ -188,28 +188,28 @@ const siteConfig = {
       title: "Architectural Shingle Replacement",
       location: "Kettering, OH",
       image:
-        img("gallery-1.svg"),
+        "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-2",
       title: "Fiber Cement Siding Install",
       location: "Beavercreek, OH",
       image:
-        img("gallery-2.svg"),
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-3",
       title: "Storm Damage Restoration",
       location: "Centerville, OH",
       image:
-        img("gallery-3.svg"),
+        "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-4",
       title: "Standing-Seam Metal Roof",
       location: "Springboro, OH",
       image:
-        img("gallery-4.svg"),
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-5",
@@ -223,7 +223,7 @@ const siteConfig = {
       title: "Vinyl Siding & Trim",
       location: "Dayton, OH",
       image:
-        img("gallery-6.svg"),
+        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1000&q=80",
     },
   ],
 
@@ -232,12 +232,12 @@ const siteConfig = {
     description: "A storm-damaged roof in Centerville, OH — fully replaced in two days.",
     before: {
       image:
-        img("before.svg"),
+        "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80",
       label: "Before",
     },
     after: {
       image:
-        img("after.svg"),
+        "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=80",
       label: "After",
     },
   },
