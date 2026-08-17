@@ -7,7 +7,7 @@ import usePageMeta from "../hooks/usePageMeta";
 import "./Gallery.css";
 
 export default function Gallery() {
-  const { gallery, beforeAfter, business, seo } = siteConfig;
+  const { gallery, beforeAfter, contact, seo } = siteConfig;
   usePageMeta(seo.gallery);
 
   return (
@@ -15,7 +15,7 @@ export default function Gallery() {
       <PageHero
         eyebrow="Our Work"
         heading="Recent Roofing & Siding Projects"
-        description={`See the quality behind every project we complete across ${business.city} and the Miami Valley.`}
+        description={`See the quality behind every project we complete across ${contact.serviceArea}.`}
       />
 
       <section className="section">

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Builds the multi-page "Ironclad Roofing & Siding" template as the site
+# Builds the multi-page "Tristan & Sons Roofing & Construction" site as the
 # served at the Vercel deployment's root — real separate pages for
 # Home/About/Services/Portfolio/Contact via React Router, not a single
 # scrolling page.
@@ -16,7 +16,7 @@ cd "$ROOT_DIR"
 
 rm -rf dist_vercel
 
-echo "==> Building Ironclad Roofing & Siding (multi-page template)"
+echo "==> Building Tristan & Sons Roofing & Construction (multi-page template)"
 cd roofing-siding-template
 npm ci
 VITE_BASE=/ npm run build

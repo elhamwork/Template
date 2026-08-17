@@ -6,7 +6,7 @@ import usePageMeta from "../hooks/usePageMeta";
 import "./Services.css";
 
 export default function Services() {
-  const { services, business, seo } = siteConfig;
+  const { services, contact, seo } = siteConfig;
   usePageMeta(seo.services);
 
   return (
@@ -14,7 +14,7 @@ export default function Services() {
       <PageHero
         eyebrow="What We Do"
         heading="Roofing & Siding Services"
-        description={`Full-service roofing and siding for homeowners across ${business.city} and the Miami Valley.`}
+        description={`Full-service roofing and construction for homeowners across ${contact.serviceArea}.`}
       />
 
       <section className="section">

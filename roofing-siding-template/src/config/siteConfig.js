@@ -11,32 +11,29 @@ const img = (path) => `${import.meta.env.BASE_URL}images/${path}`;
 
 const siteConfig = {
   business: {
-    name: "Ironclad Roofing & Siding",
-    shortName: "Ironclad",
-    city: "Dayton",
-    state: "OH",
-    tagline: "Dayton Roofing Experts",
-    heroHeadline: "Dayton Roofing Experts — Ironclad Roofing & Siding",
-    licenseNumber: "OH License #RS-58231",
-    yearFounded: 2005,
-    yearsInBusiness: 20,
-    logoText: "Ironclad",
-    logoAccent: "Roofing & Siding",
+    name: "Tristan & Sons Roofing & Construction LLC",
+    shortName: "Tristan & Sons",
+    city: "[City]",
+    state: "[State]",
+    tagline: "Roofing & Construction Experts",
+    heroHeadline: "Roofing & Construction Experts — Tristan & Sons",
+    licenseNumber: "License #[Pending]",
+    yearFounded: "[Year]",
+    yearsInBusiness: "[X]",
+    logoText: "Tristan & Sons",
+    logoAccent: "Roofing & Construction",
   },
 
   contact: {
-    phone: "(937) 555-0142",
-    phoneRaw: "+19375550142",
-    email: "office@ironcladroofingsiding.com",
-    address: "4517 Wilmington Pike, Dayton, OH 45440",
-    serviceArea: "Dayton, OH and the greater Miami Valley",
+    phone: "[Phone Number]",
+    phoneRaw: "+1",
+    email: "[email@tristanandsons.com]",
+    address: "[Street Address, City, State ZIP]",
+    serviceArea: "[Service Area]",
     serviceAreas: [
-      "Dayton",
-      "Kettering",
-      "Beavercreek",
-      "Centerville",
-      "Huber Heights",
-      "Springboro",
+      "[City 1]",
+      "[City 2]",
+      "[City 3]",
     ],
     hours: [
       { days: "Monday – Friday", time: "7:00 AM – 6:00 PM" },
@@ -78,7 +75,7 @@ const siteConfig = {
     {
       title: "Family-Owned & Operated",
       icon: "home",
-      description: "A Miami Valley family business since 2005 — every job carries our name on it.",
+      description: "A family-owned business — every job carries our name on it.",
     },
     {
       title: "Certified Experts",
@@ -106,7 +103,7 @@ const siteConfig = {
     },
     {
       title: "Our Work",
-      description: "Recent roofing and siding projects across the Miami Valley.",
+      description: "Recent roofing and construction projects across [Service Area].",
       linkText: "View Gallery",
       to: "/gallery",
       image:
@@ -115,7 +112,7 @@ const siteConfig = {
     },
     {
       title: "Reviews",
-      description: "5-star rated by homeowners across Dayton, OH.",
+      description: "5-star rated by homeowners across [Service Area].",
       linkText: "Read Our Reviews",
       // resolved from social.google at render time — see Home.jsx
       href: null,
@@ -165,63 +162,63 @@ const siteConfig = {
   ],
 
   about: {
-    eyebrow: "About Ironclad",
-    heading: "Two Decades of Roofs Done Right.",
+    eyebrow: "About Tristan & Sons",
+    heading: "Roofs Done Right.",
     body: [
-      "Ironclad Roofing & Siding was founded in 2005 on a simple idea: do the work right, price it fairly, and treat every home like it's our own. Twenty years later, that's still how we run every job.",
-      "We're a licensed, locally owned contractor serving the greater Dayton area with in-house crews — no subcontractor guesswork, no surprises. From a single repair to a full roof and siding replacement, our team is trained, certified, and accountable for the work we do.",
+      "Tristan & Sons Roofing & Construction was founded on a simple idea: do the work right, price it fairly, and treat every home like it's our own. That's still how we run every job.",
+      "We're a licensed, locally owned contractor serving [Service Area] with in-house crews — no subcontractor guesswork, no surprises. From a single repair to a full roof and construction project, our team is trained, certified, and accountable for the work we do.",
     ],
     credentials: [
-      `${20}+ years serving the Miami Valley`,
+      "Serving [Service Area]",
       "Fully licensed, bonded & insured",
       "Manufacturer-certified installation crews",
       "A+ rated with the local Better Business Bureau",
     ],
     image:
       "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=80",
-    imageAlt: "Ironclad Roofing & Siding crew on a completed residential roofing project",
+    imageAlt: "Tristan & Sons Roofing & Construction crew on a completed residential roofing project",
   },
 
   gallery: [
     {
       id: "gallery-1",
       title: "Architectural Shingle Replacement",
-      location: "Kettering, OH",
+      location: "[City], [State]",
       image:
         "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-2",
       title: "Fiber Cement Siding Install",
-      location: "Beavercreek, OH",
+      location: "[City], [State]",
       image:
         "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-3",
       title: "Storm Damage Restoration",
-      location: "Centerville, OH",
+      location: "[City], [State]",
       image:
         "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-4",
       title: "Standing-Seam Metal Roof",
-      location: "Springboro, OH",
+      location: "[City], [State]",
       image:
         "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80",
     },
     {
       id: "gallery-5",
       title: "Full Tear-Off & Replacement",
-      location: "Huber Heights, OH",
+      location: "[City], [State]",
       image:
         img("gallery-5.svg"),
     },
     {
       id: "gallery-6",
       title: "Vinyl Siding & Trim",
-      location: "Dayton, OH",
+      location: "[City], [State]",
       image:
         "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1000&q=80",
     },
@@ -229,7 +226,7 @@ const siteConfig = {
 
   beforeAfter: {
     heading: "See the Difference",
-    description: "A storm-damaged roof in Centerville, OH — fully replaced in two days.",
+    description: "A storm-damaged roof — fully replaced in two days.",
     before: {
       image:
         "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80",
@@ -245,24 +242,24 @@ const siteConfig = {
   testimonials: [
     {
       name: "Karen Whitfield",
-      city: "Kettering, OH",
+      city: "[City], [State]",
       rating: 5,
       quote:
-        "Ironclad replaced our roof after a hailstorm and handled the entire insurance claim for us. The crew was on time every day and left the yard spotless.",
+        "Tristan & Sons replaced our roof after a hailstorm and handled the entire insurance claim for us. The crew was on time every day and left the yard spotless.",
     },
     {
       name: "Marcus Bell",
-      city: "Beavercreek, OH",
+      city: "[City], [State]",
       rating: 5,
       quote:
         "Fair price, real communication, and a finished roof that looks fantastic. They even walked us through the warranty paperwork in plain English.",
     },
     {
       name: "Angela Torres",
-      city: "Centerville, OH",
+      city: "[City], [State]",
       rating: 5,
       quote:
-        "We got three quotes and Ironclad wasn't the cheapest, but it was clear they knew what they were doing. Two years later, zero issues.",
+        "We got three quotes and Tristan & Sons wasn't the cheapest, but it was clear they knew what they were doing. Two years later, zero issues.",
     },
   ],
 
@@ -274,30 +271,30 @@ const siteConfig = {
 
   footer: {
     description:
-      "Ironclad Roofing & Siding is a locally owned, fully licensed roofing and siding contractor serving the greater Dayton, Ohio area since 2005.",
+      "Tristan & Sons Roofing & Construction LLC is a locally owned, fully licensed roofing and construction contractor serving [Service Area].",
   },
 
   seo: {
     home: {
-      title: "Ironclad Roofing & Siding | Dayton, OH Roofing Experts",
+      title: "Tristan & Sons Roofing & Construction | Roofing Experts",
       description:
-        "Ironclad Roofing & Siding provides expert roof repair, replacement, and siding installation across Dayton, OH and the Miami Valley. Licensed, insured, free estimates.",
+        "Tristan & Sons Roofing & Construction provides expert roof repair, replacement, and construction services across [Service Area]. Licensed, insured, free estimates.",
     },
     about: {
-      title: "About Us | Ironclad Roofing & Siding",
-      description: "Locally owned and operated since 2005, Ironclad Roofing & Siding has served the greater Dayton, OH area with certified, warrantied roofing and siding work.",
+      title: "About Us | Tristan & Sons Roofing & Construction",
+      description: "Locally owned and operated, Tristan & Sons Roofing & Construction has served [Service Area] with certified, warrantied roofing and construction work.",
     },
     services: {
-      title: "Roofing & Siding Services | Ironclad Roofing & Siding",
-      description: "Roof repair, roof replacement, roof maintenance, and siding installation from Ironclad Roofing & Siding in Dayton, OH.",
+      title: "Roofing & Construction Services | Tristan & Sons Roofing & Construction",
+      description: "Roof repair, roof replacement, roof maintenance, and siding installation from Tristan & Sons Roofing & Construction.",
     },
     gallery: {
-      title: "Our Work | Ironclad Roofing & Siding",
-      description: "Browse recent roofing and siding projects completed by Ironclad Roofing & Siding across the greater Dayton, OH area.",
+      title: "Our Work | Tristan & Sons Roofing & Construction",
+      description: "Browse recent roofing and construction projects completed by Tristan & Sons Roofing & Construction across [Service Area].",
     },
     contact: {
-      title: "Contact Us | Ironclad Roofing & Siding",
-      description: "Request a free roofing or siding estimate from Ironclad Roofing & Siding. Serving Dayton, OH and the Miami Valley.",
+      title: "Contact Us | Tristan & Sons Roofing & Construction",
+      description: "Request a free roofing or construction estimate from Tristan & Sons Roofing & Construction. Serving [Service Area].",
     },
   },
 };
